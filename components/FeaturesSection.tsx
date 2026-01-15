@@ -11,16 +11,27 @@ export function FeaturesSection() {
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <TextEffect
-            preset="fade-in-blur"
-            per="word"
-            as="h2"
-            className="text-4xl md:text-5xl font-bold mb-6"
-            delay={0}
-            speedReveal={1.2}
-          >
-            Your AI <span className="gradient-text">Advocate</span>
-          </TextEffect>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <TextEffect
+              preset="fade-in-blur"
+              per="word"
+              as="span"
+              delay={0}
+              speedReveal={1.2}
+            >
+              Your AI
+            </TextEffect>
+            {" "}
+            <motion.span
+              className="gradient-text inline-block"
+              initial={{ opacity: 0, scale: 0.9, filter: "blur(4px)" }}
+              whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Advocate
+            </motion.span>
+          </h2>
           <TextEffect
             preset="fade-in-blur"
             per="word"

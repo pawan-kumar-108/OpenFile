@@ -40,9 +40,7 @@ export function StatCard({ stat, animated = false, large = false }: StatCardProp
       viewport={{ once: true }}
       transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
       whileHover={{ scale: 1.05, y: -4 }}
-      className={`stat-card p-6 rounded-2xl card-hover ${
-        animated ? "animate-float" : ""
-      }`}
+      className="stat-card p-6 rounded-2xl card-hover"
     >
       <div className="flex items-center space-x-4 mb-4">
         {Icon && (
